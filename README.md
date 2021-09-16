@@ -8,6 +8,12 @@ Shopping planning
 ## Motivación
 Consideramos que esta idea es interesante porque permitirá a diferentes usuarios hacer un uso planificado de su dinero. Asimismo, esta aplicación estará enfocada en el mercado peruano, es decir, contará con precios extraídos de productos que podemos encontrar en supermercados o bodegas peruanas. De esta manera, el usuario podrá encontrar una recopilación de todos los productos que posiblemente esté buscando en una sola aplicación con una aproximación a su precio real en el mercado, lo que facilitará la gestión de su dinero.
 
+## Finalidad de la Aplicación Web para el proyecto:
+Que los usuarios hagan una planificación de su dinero con una aproximación de los precios de los productos en el mercado peruano.
+
+## Finalidad de la Aplicación Mobile para el proyecto:
+Que los usuarios hagan una planificación de su dinero con una aproximación de los precios de los productos en el mercado peruano. Asimismo, está aplicación no requerirá acceso a internet para poder usar esta aplicación lo cual permitirá al usuario utilizar la aplicación en cualquier momento.
+
 ## Integrantes
 | Nombre                              | Cuenta de github | Correo                        |
 | :---:                               | :---:            | :---:                         |

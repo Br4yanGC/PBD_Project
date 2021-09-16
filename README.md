@@ -15,9 +15,9 @@ Que los usuarios hagan una planificación de su dinero con una aproximación de 
 Que los usuarios hagan una planificación de su dinero con una aproximación de los precios de los productos en el mercado peruano. Asimismo, está aplicación no requerirá acceso a internet para poder usar esta aplicación lo cual permitirá al usuario utilizar la aplicación en cualquier momento.
 
 ## Integrantes
-| Nombre                              | Cuenta de github | Correo                        |
-| :---:                               | :---:            | :---:                         |
-| Brayan Eduardo Gomero Castillo      | Br4yanGC         | brayan.gomero@utec.edu.pe     |
-| Sanders Chancan Chanca              | Zanderz17        | sanders.chancan@utec.edu.pe   |
-| Diego Antonio Escajadillo Guerrero  | DiEsGue07        | diego.escajadillo@utec.edu.pe |
-| Anderson David Cárcamo Vargas       | AndersonCarcamo  | anderson.carcamo@utec.edu.pe  |
+| Nombre                              | Cuenta de github | Correo                                |
+| :---:                               | :---:            | :---:                                 |
+| Brayan Eduardo Gomero Castillo      | Br4yanGC         | brayan<.>gomero<@>utec<.>edu<.>pe     |
+| Sanders Chancan Chanca              | Zanderz17        | sanders<.>chancan<@>utec<.>edu<.>pe   |
+| Diego Antonio Escajadillo Guerrero  | DiEsGue07        | diego<.>escajadillo<@>utec<.>edu<.>pe |
+| Anderson David Cárcamo Vargas       | AndersonCarcamo  | anderson<.>carcamo<@>utec<.>edu<.>pe  |

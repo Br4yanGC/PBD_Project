@@ -9,9 +9,9 @@ Shopping planning
 Consideramos que esta idea es interesante porque permitirá a diferentes usuarios hacer un uso planificado de su dinero. Asimismo, esta aplicación estará enfocada en el mercado peruano, es decir, contará con precios extraídos de productos que podemos encontrar en supermercados o bodegas peruanas. De esta manera, el usuario podrá encontrar una recopilación de todos los productos que posiblemente esté buscando en una sola aplicación con una aproximación a su precio real en el mercado, lo que facilitará la gestión de su dinero.
 
 ## Integrantes
-| Nombre | Cuenta de github | Correo |
-| :---:         |     :---:      |          :---: |
-| Brayan Eduardo Gomero Castillo   | Br4yanGC     | brayan.gomero@utec.edu.pe    |
-| Sanders Chancan Chanca      | Zanderz17       | sanders.chancan@utec.edu.pe      |
-| Diego Antonio Escajadillo Guerrero     | DiEsGue07       | diego.escajadillo@utec.edu.pe      |
-| Anderson David Cárcamo Vargas     | AndersonCarcamo       | anderson.carcamo@utec.edu.pe      |
+| Nombre                              | Cuenta de github | Correo                        |
+| :---:                               | :---:            | :---:                         |
+| Brayan Eduardo Gomero Castillo      | Br4yanGC         | brayan.gomero@utec.edu.pe     |
+| Sanders Chancan Chanca              | Zanderz17        | sanders.chancan@utec.edu.pe   |
+| Diego Antonio Escajadillo Guerrero  | DiEsGue07        | diego.escajadillo@utec.edu.pe |
+| Anderson David Cárcamo Vargas       | AndersonCarcamo  | anderson.carcamo@utec.edu.pe  |

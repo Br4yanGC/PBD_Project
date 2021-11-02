@@ -1,1 +1,29 @@
-<p>product-edit works!</p>
+<form [formGroup]="productsForm" (ngSubmit)="saveProduct(productsForm.value)">
+  <div>
+    <label>Product name:</label>
+    <input type="text" formControlName="product_name">
+  </div>
+  <div>
+    <label>Product trademark:</label>
+    <input type="text" formControlName="product_trademark">
+  </div>
+  <div>
+    <label>Product price:</label>
+    <input type="number" formControlName="product_price">
+  </div>
+  <div>
+    <label>Product type:</label>
+    <input type="text" formControlName="product_type">
+  </div>
+  <div>
+    <label>Product stock:</label>
+    <input type="number" formControlName="product_stock">
+  </div>
+  <div>
+    <label>User id:</label>
+    <input type="number" formControlName="user_id">
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div> 
+</form>

@@ -10,18 +10,17 @@ import { ProductsServiceService } from 'src/app/_services/products-service.servi
 export class AseoYLimpiezaComponent implements OnInit {
   products: any[] = [];
   user_id: any=1;
-  product_type: any='aseo y limpieza';
+  product_type: any="aseo y limpieza";
   constructor(
     private productsServiceService: ProductsServiceService,
     private router: Router
   ) { }
   ngOnInit(): void { 
-    //Possbile error with 'this.user_id'
     this.productsServiceService.getProductsByType(this.user_id, this.product_type).subscribe( (data) => {
       this.products = data;
     })
   }
   deleteProduct(user_id: any, product_id: any){
-    this.router.navigate(['/user-interface/aseo-y-limpieza/delete', user_id, product_id])
+    this.router.navigate(['/user-interface/aseo-y-limpieza/delete', this.user_id, product_id])
   }
 }

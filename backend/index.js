@@ -34,10 +34,11 @@ app.get('/products/:user_id', function(req, res){
 });
 */
 
-// Método get que selecciona los productos de determinado tipo
-// de 1 sola bodega. Por ejemplo probar en Postman: localhost:3000/products/1?product_type=viveres
-// Eso devolvera todos los productos del tipo viveres de la bodedga 1.
-app.get('/products/:user_id', function(req, res){
+/*
+  Método get que selecciona los todos productos de determinada bodega
+  por medio de su user_id
+*/
+app.get('/products/:product_id', function(req, res){
   var connection = mysql.createConnection({
     host: 'localhost',
     user: 'utec',
@@ -49,9 +50,41 @@ app.get('/products/:user_id', function(req, res){
   var myQuery = " SELECT product_id, product_name, product_trademark, product_price, " +
                 " product_type, product_stock, created_date, modified_date " +
                 " FROM products " +
-                " WHERE user_id = ? ";
-  var myValues = [req.params.user_id];
+                " WHERE product_id = ? ";
+  var myValues = [req.params.product_id];
 
+  connection.query(myQuery, myValues, function(error, results, fields){
+    if (error) throw error;
+    res.send(results[0]);
+    connection.end();
+  });
+});
+
+/* 
+  Método get que selecciona los productos de determinado tipo
+  de 1 sola bodega. Por ejemplo probar en Postman: 
+  localhost:9000/products?user_id=1&product_type=viveres
+  Eso devolvera todos los productos de la bodedga 1 del tipo viveres. 
+*/
+app.get('/products', function(req, res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'utec',
+    password: '1234567890',
+    database: 'StockBodegas'
+  });
+  connection.connect();
+
+  var myQuery = " SELECT product_id, product_name, product_trademark, product_price, " +
+                " product_type, product_stock, user_id, created_date, modified_date " +
+                " FROM products " +
+                " WHERE 1 = 1 ";
+  var myValues = [];
+
+  if(req.query.user_id){
+    myQuery += " AND user_id = ? ";
+    myValues.push(req.query.user_id);
+  }
   if(req.query.product_type){
     myQuery += " AND UPPER(product_type) = UPPER(?) ";
     myValues.push(req.query.product_type);
@@ -63,10 +96,6 @@ app.get('/products/:user_id', function(req, res){
     connection.end();
   });
 });
-
-
-
-
 
 //Método para agregar productos a una determindad bodega mediante el user_id de la bodega
 // Por ejemplo: localhost:9000/products/2
@@ -134,10 +163,8 @@ app.delete('/products/:user_id/:product_id', function(req, res){
   });
 });
 
-
-
-//Modificar un producto de un user_id con su respectivo product_id
-//Por ejemplo: localhost:9000/products/2/51
+//Modificar un producto de un con su respectivo product_id
+//Por ejemplo: localhost:9000/products/51
 /*{
   "product_name": "Gaaa Dental",
   "product_trademark": "Colgate",
@@ -147,7 +174,7 @@ app.delete('/products/:user_id/:product_id', function(req, res){
 }*/
 //Esto modifica el producto con product_id 51.
 
-app.put('/products/:user_id/:product_id', function(req, res){
+app.put('/products/:product_id', function(req, res){
   var connection = mysql.createConnection({
     host: 'localhost',
     user: 'utec',
@@ -185,9 +212,7 @@ app.put('/products/:user_id/:product_id', function(req, res){
 
   connection.query(myQuery, myValues, function(error, results, fields){
     if (error) throw error;
-    
     res.send(results);
-
     connection.end();
   });
 });

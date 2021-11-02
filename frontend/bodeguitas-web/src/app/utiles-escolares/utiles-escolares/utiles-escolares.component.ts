@@ -22,6 +22,6 @@ export class UtilesEscolaresComponent implements OnInit {
     })
   }
   deleteProduct(user_id: any, product_id: any){
-    this.router.navigate(['/user-interface/utiles-escolares/delete', user_id, product_id])
+    this.router.navigate(['/user-interface/utiles-escolares/delete', this.user_id, product_id])
   }
 }

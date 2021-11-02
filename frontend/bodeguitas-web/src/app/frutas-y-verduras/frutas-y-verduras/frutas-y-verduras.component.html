@@ -10,12 +10,12 @@
     </tr>
     <tr *ngFor="let item of products">
         <td>{{item.product_id}}</td>
-        <td>{{item.product_name}}</td>
+        <td><a [routerLink]="['/user-interface/view', item.product_id]">{{item.product_name}}</a></td>
         <td>{{item.product_trademark}}</td>
         <td>{{item.product_price}}</td>
         <td>{{item.product_type}}</td>
         <td>{{item.product_stock}}</td>
-        <td><button [routerLink]="['user-interface/frutas-y-verduras/edit/:user_id/:product_id', item.user_id, item.product_id]">Edit</button></td>
+        <td><button [routerLink]="['/user-interface/frutas-y-verduras/edit/', item.product_id]">Edit</button></td>
         <td><button (click)="deleteProduct(item.user_id, item.product_id)">Delete</button></td>
     </tr>
 </table>

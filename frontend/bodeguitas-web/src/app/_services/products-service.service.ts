@@ -8,9 +8,11 @@ export class ProductsServiceService {
   constructor(
     private http: HttpClient
   ) { }
-  //localhost:3000/products/1?product_type=viveres
+  getProductByProductId(product_id: any) {
+    return this.http.get<any>(`http://localhost:9000/products/${product_id}`);
+  }
   getProductsByType(user_id: any, product_type: any) {
-    return this.http.get<any>(`http://localhost:9000/products/${user_id}?product_type=${product_type}`);
+    return this.http.get<any>(`http://localhost:9000/products?user_id=${user_id}&product_type=${product_type}`);
   }
   insertProduct(user_id: any, product: any) {
     return this.http.post<any>(`http://localhost:9000/products/${user_id}`, product);
@@ -18,7 +20,7 @@ export class ProductsServiceService {
   deleteProduct(user_id: any, product_id: any) {
     return this.http.delete<any>(`http://localhost:9000/products/${user_id}/${product_id}`);
   }
-  updateProduct(user_id: any, product_id: any, product: any) {
-    return this.http.put<any>(`http://localhost:9000/products/${user_id}/${product_id}`, product);
+  updateProduct(product_id: any, product: any) {
+    return this.http.put<any>(`http://localhost:9000/products/${product_id}`, product);
   }
 }

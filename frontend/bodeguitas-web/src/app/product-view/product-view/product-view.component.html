@@ -1,1 +1,11 @@
-<p>product-view works!</p>
+<div *ngIf="product">
+    <h3>
+      Member {{product.product_id}}
+    </h3>
+    <p>{{product.product_name}}</p>
+    <p>{{product.product_trademark}}</p>
+    <p>{{product.product_price}}</p>
+    <p>{{product.product_type}}</p>
+    <p>{{product.product_stock}}</p>
+    <p>{{product.user_id}}</p>
+  </div>

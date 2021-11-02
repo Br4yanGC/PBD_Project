@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-
 import { ViveresComponent } from './viveres/viveres/viveres.component';
 import { BebidasComponent } from './bebidas/bebidas/bebidas.component';
 import { UtilesEscolaresComponent } from './utiles-escolares/utiles-escolares/utiles-escolares.component';
@@ -38,8 +37,8 @@ import { ProductDeleteComponent } from './product-delete/product-delete/product-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     CommonModule

@@ -26,14 +26,14 @@ CREATE TABLE products(
 );
 
 
-INSERT INTO users (username, password, business_name, business_location, created_date, modified_date) 
-VALUES ('roberto@hotmail.com', MD5('roberto123'), 'La bodega de la esquina', 'Mz G51 LT31 Callao', NOW(), NOW());
+INSERT INTO users (username, password, created_date, modified_date) 
+VALUES ('roberto@hotmail.com', MD5('roberto123'), NOW(), NOW());
 
-INSERT INTO users(username, password, business_name, business_location, created_date, modified_date) 
-VALUES ('alonso@hotmail.com', MD5('enero101992'), 'La bodega de Alonso', 'Mz G12 LT31 Bellavista', NOW(), NOW());
+INSERT INTO users(username, password, created_date, modified_date) 
+VALUES ('alonso@hotmail.com', MD5('enero101992'), NOW(), NOW());
 
-INSERT INTO users(username, password, business_name, business_location, created_date, modified_date) 
-VALUES ('alicia@hotmail.com', MD5('alicia22222'), 'La bodega preferida', 'Mz G32 LT21 Los Olivos', NOW(), NOW());
+INSERT INTO users(username, password, created_date, modified_date) 
+VALUES ('alicia@hotmail.com', MD5('alicia22222'), NOW(), NOW());
 
 
 INSERT INTO products(product_name,product_trademark, product_price, product_type, product_stock, user_id, created_date, modified_date)

@@ -3,10 +3,8 @@ use StockBodegas;
 
 CREATE TABLE users(
     user_id int NOT NULL AUTO_INCREMENT,
-    username varchar(100) NOT NULL,
+    username varchar(100) NOT NULL UNIQUE,
     password varchar(100) NOT NULL,
-    business_name varchar(100) NOT NULL,
-    business_location varchar(100) NOT NULL,
     created_date datetime,
     modified_date datetime, 
     PRIMARY KEY (user_id)

@@ -3,8 +3,8 @@ use StockBodegas;
 
 CREATE TABLE users(
     user_id int NOT NULL AUTO_INCREMENT,
-    email varchar(100) NOT NULL,
-    user_password varchar(100) NOT NULL,
+    username varchar(100) NOT NULL,
+    password varchar(100) NOT NULL,
     business_name varchar(100) NOT NULL,
     business_location varchar(100) NOT NULL,
     created_date datetime,
@@ -28,24 +28,17 @@ CREATE TABLE products(
 );
 
 
-INSERT INTO users(email, user_password, business_name, business_location,
+INSERT INTO users(username, password, business_name, business_location,
 created_date, modified_date) 
-VALUES ('roberto@hotmail.com', 'roberto123', 'La bodega de la esquina', 'Mz G51 LT31 Callao', NOW(), NOW());
+VALUES ('roberto@hotmail.com', MD5('roberto123'), 'La bodega de la esquina', 'Mz G51 LT31 Callao', NOW(), NOW());
 
-INSERT INTO users(email, user_password, business_name, business_location,
+INSERT INTO users(username, password, business_name, business_location,
 created_date, modified_date) 
-VALUES ('alonso@hotmail.com', 'enero101992', 'La bodega de Alonso', 'Mz G12 LT31 Bellavista', NOW(), NOW());
+VALUES ('alonso@hotmail.com', MD5('enero101992'), 'La bodega de Alonso', 'Mz G12 LT31 Bellavista', NOW(), NOW());
 
-INSERT INTO users(email, user_password, business_name, business_location,
+INSERT INTO users(username, password, business_name, business_location,
 created_date, modified_date) 
-VALUES ('alicia@hotmail.com', 'alicia22222', 'La bodega preferida', 'Mz G32 LT21 Los Olivos', NOW(), NOW());
-
-INSERT INTO users(email, user_password, business_name, business_location,
-created_date, modified_date) 
-VALUES ('ricado@hotmail.com', 'richavo777', 'La bodega del barrio', 'Mz G12 LT55 Los Olivos', NOW(), NOW());
-
-
-
+VALUES ('alicia@hotmail.com', MD5('alicia22222'), 'La bodega preferida', 'Mz G32 LT21 Los Olivos', NOW(), NOW());
 
 
 INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
@@ -170,13 +163,6 @@ VALUES('Galleta dulce', 'Caritas', 0.70, 'dulces y snacks', 10, 1,NOW(),NOW());
 INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
 user_id, created_date, modified_date)
 VALUES('Galleta dulce', 'Frac', 0.70, 'dulces y snacks', 10, 1,NOW(),NOW());
-
-
-
-
-
-
-
 
 
 

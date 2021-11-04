@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsServiceService } from 'src/app/_services/products-service.service';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-carnes-y-embutidos',
@@ -9,18 +10,18 @@ import { ProductsServiceService } from 'src/app/_services/products-service.servi
 })
 export class CarnesYEmbutidosComponent implements OnInit {
   products: any[] = [];
-  user_id: any=1;
   product_type: any="carnes y embutidos";
   constructor(
     private productsServiceService: ProductsServiceService,
-    private router: Router
+    private router: Router,
+    public authService: AuthService
   ) { }
   ngOnInit(): void {
-    this.productsServiceService.getProductsByType(this.user_id, this.product_type).subscribe( (data) => {
+    this.productsServiceService.getProductsByType(this.authService.getCurrentUser().user_id, this.product_type).subscribe( (data) => {
       this.products = data;
     })
   }
   deleteProduct(user_id: any, product_id: any){
-    this.router.navigate(['/user-interface/carnes-y-embutidos/delete', this.user_id, product_id])
+    this.router.navigate(['/user-interface/carnes-y-embutidos/delete', this.authService.getCurrentUser().user_id, product_id])
   }
 }

@@ -1,12 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Bodeguitas Web</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="authService.isLoggedIn()" aria-current="page" routerLink="/user-interface">Home</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/user-interface/aseo-y-limpieza">Aseo y limpieza</a></li>
+            <li><a class="dropdown-item" routerLink="/user-interface/bebidas">Bebidas</a></li>
+            <li><a class="dropdown-item" routerLink="/user-interface/carnes-y-embutidos">Carnes y embutidos</a></li>
+            <li><a class="dropdown-item" routerLink="/user-interface/dulces-y-snacks">Dulces y snacks</a></li>
+            <li><a class="dropdown-item" routerLink="/user-interface/frutas-y-verduras">Frutas y verduras</a></li>
+            <li><a class="dropdown-item" routerLink="/user-interface/utiles-escolares">Utiles escolares</a></li>
+            <li><a class="dropdown-item" routerLink="/user-interface/viveres">Viveres</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" href="javascript:void(0);" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--
 <h1>{{title}}</h1>
 <ul>
-  <li><a routerLink="/user-interface">Home</a></li>
-  <li><a routerLink="/user-interface/aseo-y-limpieza">Aseo y limpieza</a></li>
-  <li><a routerLink="/user-interface/bebidas">Bebidas</a></li>
-  <li><a routerLink="/user-interface/carnes-y-embutidos">Carnes y embutidos</a></li>
-  <li><a routerLink="/user-interface/dulces-y-snacks">Dulces y snacks</a></li>
-  <li><a routerLink="/user-interface/frutas-y-verduras">Frutas y verduras</a></li>
-  <li><a routerLink="/user-interface/utiles-escolares">Utiles escolares</a></li>
-  <li><a routerLink="/user-interface/viveres">Viveres</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface">Home</a></li>
+  <li *ngIf="!authService.isLoggedIn()"><a routerLink="/login">Login</a></li>
+  <li *ngIf="!authService.isLoggedIn()"><a routerLink="/register">Register</a></li> 
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/aseo-y-limpieza">Aseo y limpieza</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/bebidas">Bebidas</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/carnes-y-embutidos">Carnes y embutidos</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/dulces-y-snacks">Dulces y snacks</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/frutas-y-verduras">Frutas y verduras</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/utiles-escolares">Utiles escolares</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a routerLink="/user-interface/viveres">Viveres</a></li>
+  <li *ngIf="authService.isLoggedIn()"><a href="javascript:void(0);" (click)="logout()">Logout</a></li>
 </ul>
+<button (click)="showAuthor()">Who created this?</button>
+-->
+
 <router-outlet></router-outlet>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <i class="bi-bezier2"></i>
+      </a>
+      <span class="text-muted">© 2021 OjitoOjitoSA</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><i class="bi-instagram"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="bi-facebook"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="bi-youtube"></i></a></li>
+    </ul>
+  </footer>
+</div>
+
+

@@ -19,6 +19,10 @@ import { UserInterfaceComponent } from './user-interface/user-interface/user-int
 import { ProductViewComponent } from './product-view/product-view/product-view.component';
 import { ProductEditComponent } from './product-edit/product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product-delete/product-delete/product-delete.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { ProductDeleteComponent } from './product-delete/product-delete/product-
     UserInterfaceComponent,
     ProductViewComponent,
     ProductEditComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

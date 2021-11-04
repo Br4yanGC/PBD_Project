@@ -1,1 +1,16 @@
-<p>user-interface works!</p>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="https://imagenpng.com/wp-content/uploads/2016/09/025Pikachu_OS_anime_10.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Welcome back to your bodeguita! We've missed you</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis consectetur ipsa voluptas libero nihil quisquam. Quasi exercitationem necessitatibus nam hic dolore facere voluptates odit provident unde laboriosam fugit, ab velit.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" *ngIf="authService.isLoggedIn()" (click)="logout()">Logout</button>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" *ngIf="!authService.isLoggedIn()" routerLink="/login">Login</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4" (click)="showAuthor()">More info</button>
+        </div>
+      </div>
+    </div>
+  </div>

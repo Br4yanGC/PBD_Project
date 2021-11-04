@@ -218,6 +218,7 @@ app.put('/products/:product_id', function(req, res){
 });
 
 //Agrega un nuevo usuario
+/*
 app.post('/users', function(req, res){
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -235,8 +236,28 @@ app.post('/users', function(req, res){
     connection.end();
   });
 });
+*/
+
+app.post('/users', function(req, res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'utec',
+    password: '1234567890',
+    database: 'StockBodegas'
+  });
+  connection.connect();
+  var myQuery = " INSERT INTO users (username, password, modified_date, created_date) " +
+                " VALUES (?, MD5(?), NOW(), NOW()) ";
+  var myValues = [ req.body.username, req.body.password ];
+  connection.query(myQuery, myValues, function(error, results, fields){
+    if (error) throw error;
+    res.send(results);
+    connection.end();
+  });
+});
 
 //Permite realizar el login.
+/*
 app.post('/login', function(req, res){
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -257,6 +278,30 @@ app.post('/login', function(req, res){
     
     res.send(results[0]);
 
+    connection.end();
+  });
+});
+*/
+
+app.post('/login', function(req, res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'utec',
+    password: '1234567890',
+    database: 'StockBodegas'
+  });
+
+  connection.connect();
+  var myQuery = " SELECT user_id, username " +
+                " FROM users " +
+                " WHERE username = ? " +
+                " AND password = MD5(?) ";
+  
+  var myValues = [ req.body.username, req.body.password ];
+  
+  connection.query(myQuery, myValues, function(error, results, fields){
+    if (error) throw error;
+    res.send(results[0]);
     connection.end();
   });
 });

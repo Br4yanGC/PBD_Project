@@ -13,8 +13,7 @@
 
 ## Motivación
 
-Consideramos que esta idea es interesante porque permitirá a diferentes usuarios hacer un uso planificado de su dinero. Asimismo, esta aplicación estará enfocada en el mercado peruano, es decir, contará con precios extraídos de productos que podemos encontrar en supermercados o bodegas peruanas. De esta manera, el usuario podrá encontrar una recopilación de todos los productos que posiblemente esté buscando en una sola aplicación con una aproximación a su precio real en el mercado, lo que facilitará la gestión de su dinero.
-
+Dada la coyuntura en la que nos encontramos muchas personas han visto conveniente abrir un negocio que les permita traer ingresos a su hogar. Es así como nacen las populares bodeguitas, las cuales a diferencia de aquellas bodegas a las que ya venimos acostumbrados, estas han pasado ha implementar ciertas tecnologías que le permitan tener un mejor manejo sobre sus bodegas. En ese sentido, la presente aplicación web apunta a ello, al generar un sistema el cual le permita a las personas, que cuenten con una bodega, administrar los productos con los que cuentan, clasificarlos por su tipo, anhadirles un precio y en general gestionarlos a los mismos.
 
 
 ## Funcionalidades
@@ -58,7 +57,7 @@ Consideramos que esta idea es interesante porque permitirá a diferentes usuario
 1. Abrir MySQL
 2. Ejecutar el script de inicialización de la DB:
 
-`Se recomienda copiar y ejecutar manualmente todos los códigos del archivo bodega.sql`
+`source bodega.sql`
 
 3. Necesita tener el siguiente usuario:
 

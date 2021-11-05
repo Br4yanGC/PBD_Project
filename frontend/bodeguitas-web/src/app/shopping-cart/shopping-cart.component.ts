@@ -11,7 +11,7 @@ import { AuthService } from '../_services/auth.service';
 export class ShoppingCartComponent implements OnInit {
   product_id: any;
   products: any[] = [];
-  suma: any;
+  suma: any=0;
   constructor(
     private activatedRoute: ActivatedRoute,
     private productsServiceService: ProductsServiceService,
@@ -22,8 +22,11 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit(): void {
     this.productsServiceService.getProductsCart(this.authService.getCurrentUser().user_id).subscribe( (data) => {
       this.products = data;
-      //ACA HAGO EL FOR Y LA SUMA
-      this.suma = 500;
+      for(let n in data){
+        this.suma = this.suma  + data[n]['product_price'];
+      }
+      
+      //this.suma = this.suma + data.get('product_price');
     })
     this.activatedRoute.paramMap.subscribe(
       data => {

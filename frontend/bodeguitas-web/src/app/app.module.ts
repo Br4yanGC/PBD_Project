@@ -23,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ProductsNewComponent } from './products-new/products-new.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ProductsNewComponent
   ],
   imports: [
     BrowserModule,

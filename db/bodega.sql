@@ -1,3 +1,4 @@
+drop database StockBodegas;
 create database StockBodegas;
 use StockBodegas;
 

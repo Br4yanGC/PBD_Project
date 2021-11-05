@@ -16,7 +16,6 @@ export class AseoYLimpiezaComponent implements OnInit {
     private productsServiceService: ProductsServiceService,
     private router: Router,
     public authService: AuthService,
-    private formBuilder: FormBuilder,
   ) { }
   ngOnInit(): void { 
     this.productsServiceService.getProductsByType(this.authService.getCurrentUser().user_id, this.product_type).subscribe( (data) => {

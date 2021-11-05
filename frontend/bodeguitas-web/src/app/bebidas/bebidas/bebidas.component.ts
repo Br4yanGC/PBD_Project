@@ -21,6 +21,19 @@ export class BebidasComponent implements OnInit {
       this.products = data;
     })
   }
+
+  addProductCart(values: any){
+    this.productsServiceService.insertToCart(values).subscribe(
+      response => {
+        console.log(response);
+        this.router.navigate(['/user-interface']);
+      },
+      error => {
+        console.error(error);
+      }
+    );
+  }
+
   deleteProduct(user_id: any, product_id: any){
     this.router.navigate(['/user-interface/bebidas/delete', this.authService.getCurrentUser().user_id, product_id])
   }

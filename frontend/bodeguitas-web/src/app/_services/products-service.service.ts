@@ -17,8 +17,8 @@ export class ProductsServiceService {
   getProductsCart(user_id: any) {
     return this.http.get<any>(`http://localhost:9000/productsCart?user_id=${user_id}}`)
   }
-  insertProduct(user_id: any, product: any) {
-    return this.http.post<any>(`http://localhost:9000/products/${user_id}`, product);
+  insertProduct(product: any) {
+    return this.http.post<any>('http://localhost:9000/products', product);
   }
   insertToCart(product: any) {
     return this.http.post<any>('http://localhost:9000/cart', product);

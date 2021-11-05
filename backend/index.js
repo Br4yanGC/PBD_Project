@@ -144,7 +144,7 @@ app.get('/productsCart', function(req, res){
 }
 */
 // Esto agrega a la bodega del usuario 2 el producto de cepillo dental.
-app.post('/products/:user_id', function(req, res){
+app.post('/products', function(req, res){
   var connection = mysql.createConnection({
     host: 'localhost',
     user: 'utec',
@@ -287,27 +287,6 @@ app.put('/products/:product_id', function(req, res){
   });
 });
 
-//Agrega un nuevo usuario
-/*
-app.post('/users', function(req, res){
-  var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'utec',
-    password: '1234567890',
-    database: 'StockBodegas'
-  });
-  connection.connect();
-  var myQuery = " INSERT INTO user (email, user_password,business_name, business_location, modified_date, created_date) " +
-                " VALUES (?, MD5(?), ?, ?, NOW(), NOW()) ";
-  var myValues = [ req.body.email, req.body.user_password, req.body.business_name, req.body.business_location ];
-  connection.query(myQuery, myValues, function(error, results, fields){
-    if (error) throw error;
-    res.send(results);
-    connection.end();
-  });
-});
-*/
-
 app.post('/users', function(req, res){
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -325,33 +304,6 @@ app.post('/users', function(req, res){
     connection.end();
   });
 });
-
-//Permite realizar el login.
-/*
-app.post('/login', function(req, res){
-  var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'utec',
-    password: '1234567890',
-    database: 'StockBodegas'
-  });
-  connection.connect();
-  var myQuery = " SELECT user_id, email, business_name, business_location " +
-                " FROM users " +
-                " WHERE email = ? " +
-                " AND user_password = MD5(?) ";
-  
-  var myValues = [ req.body.email, req.body.user_password ];
-  
-  connection.query(myQuery, myValues, function(error, results, fields){
-    if (error) throw error;
-    
-    res.send(results[0]);
-
-    connection.end();
-  });
-});
-*/
 
 app.post('/login', function(req, res){
   var connection = mysql.createConnection({
@@ -375,7 +327,6 @@ app.post('/login', function(req, res){
     connection.end();
   });
 });
-
 
 app.listen(port, function(){
   console.log("Server start in port 9000!")

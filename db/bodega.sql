@@ -349,3 +349,141 @@ VALUES('Galleta Oreo Sabor Original x UND', 'OREO', 3.90, 'dulces y snacks', 30,
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
 VALUES('Galleta Chokosoda x UND', 'FIELD', 4.90, 'dulces y snacks', 30, 3, NOW(), NOW());
+
+#Bodega 4:
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Pan 1kg', NULL, 1.00, 'viveres', 15,4,now(),now());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Leche 1L', 'Gloria', 3.50, 'viveres',10,4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Leche 1L', "Ideal", 3.00, 'viveres',20,4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Lata de atun', 'Vega', 5.20, 'viveres',15,4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Azucar Rubia 1kg', NULL, 3.00, 'viveres',12,4,NOW(),NOW());
+
+
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Gaseosa 500ml', 'Inca Kola', 2.50, 'bebidas',10, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Gaseosa 500ml', 'Pepsi', 1.50, 'bebidas',15, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Gaseosa 2.5lt', 'Coca Cola', 5.60, 'bebidas',10, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Gaseosa 400 ml', 'Crush', 1.50, 'bebidas',30, 4,NOW(),NOW());
+
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Lapiz', 'Layconsa', 1.00, 'utiles escolares',30, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Borrador', 'Faber Castell', 1.50, 'utiles escolares',10, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Regla 30cm', 'Faber Castell', 1.60, 'utiles escolares',6, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Cuaderno', 'Norma', 5.00, 'utiles escolares',25, 4,NOW(),NOW());
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Jabon Antibacterial 120gr','Protex', 2.50, 'aseo y limpieza',11, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Pasta Dental 150ml', 'Colgate', 3.60, 'aseo y limpieza',6, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Cepillo Dental', 'Colgate', 3.50, 'aseo y limpieza',15, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Papel higienico', 'Suave', 1.20, 'aseo y limpieza',20, 4,NOW(),NOW());
+
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Manzana 1kg', NULL, 2.20, 'frutas y verduras', 11, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Pera 1kg', NULL, 3.50, 'frutas y verduras', 5, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Platano 1kg', NULL, 3.00, 'frutas y verduras', 9, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Mandarina 1kg', NULL, 2.50, 'frutas y verduras', 14, 4,NOW(),NOW());
+
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Hot Dog 440g', 'Suiza', 10.80, 'carnes y embutidos', 5, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Chorizo precocido 100g', NULL, 2.50, 'carnes y embutidos', 10, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Hot dog Ahumado 165g', NULL, 4.40, 'carnes y embutidos', 10, 4,NOW(),NOW());
+
+
+
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Cheese Tris', 'Frito Lay', 1.50, 'dulces y snacks', 20, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Lays', 'Frito Lay', 1.20, 'dulces y snacks', 20, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Doritos', 'Frito Lay', 1.50, 'dulces y snacks', 20, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('Morochas', 'Nestle', 0.50, 'dulces y snacks', 30, 4,NOW(),NOW());
+
+INSERT INTO products(product_name,product_trademark, product_price, product_type,product_stock,
+user_id, created_date, modified_date)
+VALUES('ChocoDonuts', 'Costa', 1.00, 'dulces y snacks', 30, 4,NOW(),NOW());

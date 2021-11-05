@@ -11,6 +11,7 @@
             <th>product_price</th>
             <th>product_type</th>
             <th>product_stock</th>
+            <th>add to cart</th>
             <th>edit</th>
             <th>delete</th>
             </tr>
@@ -23,6 +24,7 @@
             <td>{{item.product_price}}</td>
             <td>{{item.product_type}}</td>
             <td>{{item.product_stock}}</td>
+            <td><a href="javascript:void(0);" (click)="deleteProduct(item.user_id, item.product_id)"><i class="bi bi-cart-plus"></i></a></td>
             <td><a [routerLink]="['/user-interface/bebidas/edit/', item.product_id]"><i class="bi bi-pencil"></i></a></td>
             <td><a href="javascript:void(0);" (click)="deleteProduct(item.user_id, item.product_id)"><i class="bi bi-trash"></i></a></td>
             </tr>

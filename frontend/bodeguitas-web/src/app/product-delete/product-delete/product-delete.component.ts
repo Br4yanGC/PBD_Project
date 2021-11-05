@@ -13,7 +13,7 @@ export class ProductDeleteComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private productServiceService: ProductsServiceService
+    private productsServiceService: ProductsServiceService
   ) { }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class ProductDeleteComponent implements OnInit {
     );
   }
   deleteProduct(user_id: any, product_id: any) {
-    this.productServiceService.deleteProduct(user_id, product_id).subscribe(
+    this.productsServiceService.deleteProduct(user_id, product_id).subscribe(
       response => {
         console.log(response);
         this.router.navigate(['/user-interface']);

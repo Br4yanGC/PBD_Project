@@ -97,6 +97,40 @@ app.get('/products', function(req, res){
   });
 });
 
+/* 
+  Método get que selecciona los productos ADD TO CART
+  de 1 sola bodega. Por ejemplo probar en Postman: 
+  localhost:9000/productsCart?user_id=1
+  Eso devolvera todos los productos de la bodedga 1 del tipo viveres. 
+*/
+app.get('/productsCart', function(req, res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'utec',
+    password: '1234567890',
+    database: 'StockBodegas'
+  });
+  connection.connect();
+
+  var myQuery = " SELECT product_id, product_name, product_trademark, product_price, " +
+                " product_type, user_id " +
+                " FROM cart " +
+                " WHERE 1 = 1 ";
+  var myValues = [];
+
+  if(req.query.user_id){
+    myQuery += " AND user_id = ? ";
+    myValues.push(req.query.user_id);
+  }
+  
+  console.log(myQuery, myValues);
+  connection.query(myQuery, myValues, function(error, results, fields){
+    if (error) throw error;
+    res.send(results);
+    connection.end();
+  });
+});
+
 //Método para agregar productos a una determindad bodega mediante el user_id de la bodega
 // Por ejemplo: localhost:9000/products/2
 // En el body debe ir lo siguiente: 
@@ -123,7 +157,7 @@ app.post('/products/:user_id', function(req, res){
                 " product_type, product_stock, user_id, created_date, modified_date) " +
                 " VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW()); ";
   var myValues = [req.body.product_name, req.body.product_trademark,
-      req.body.product_price, req.body.product_type, req.body.product_stock, req.params.user_id];
+      req.body.product_price, req.body.product_type, req.body.product_stock, req.body.user_id];
 
   connection.query(myQuery, myValues, function(error, results, fields){
     if (error) throw error;
@@ -132,8 +166,28 @@ app.post('/products/:user_id', function(req, res){
   });
 });
 
+// Esto agrega al shopping-cart 1 producto de cepillo dental.
+app.post('/cart', function(req, res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'utec',
+    password: '1234567890',
+    database: 'StockBodegas'
+  });
 
+  connection.connect();
+  var myQuery = " INSERT INTO cart (product_name, product_trademark, product_price, " +
+                " product_type, user_id) " +
+                " VALUES (?, ?, ?, ?, ?); ";
+  var myValues = [req.body.product_name, req.body.product_trademark,
+      req.body.product_price, req.body.product_type, req.body.user_id];
 
+  connection.query(myQuery, myValues, function(error, results, fields){
+    if (error) throw error;
+    res.send(results);
+    connection.end();
+  });
+});
 
 //Método que borra un producto de un determinado usuario (Es decir solo de 1 bodega)
 // Se utiliza tanto el user_id y también el product_id
@@ -146,19 +200,35 @@ app.delete('/products/:user_id/:product_id', function(req, res){
     password: '1234567890',
     database: 'StockBodegas'
   });
-
   connection.connect();
-
   var myQuery = " DELETE FROM products " +
                 " WHERE product_id = ?; ";
-
   var myValues = [ req.params.product_id];
-
   connection.query(myQuery, myValues, function(error, results, fields){
     if (error) throw error;
-
     res.send(results);
+    connection.end();
+  });
+});
 
+//Método que borra un producto de un determinado usuario en el SHOPPING CART
+// Se utiliza tanto el user_id y también el product_id
+//Por ejemplo: localhost:9000/products/2/52 
+//Esto borra el producto con el product_id 52 de la bodega del usuario 2.
+app.delete('/productsCart/:user_id/:product_id', function(req, res){
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'utec',
+    password: '1234567890',
+    database: 'StockBodegas'
+  });
+  connection.connect();
+  var myQuery = " DELETE FROM cart " +
+                " WHERE product_id = ?; ";
+  var myValues = [ req.params.product_id];
+  connection.query(myQuery, myValues, function(error, results, fields){
+    if (error) throw error;
+    res.send(results);
     connection.end();
   });
 });

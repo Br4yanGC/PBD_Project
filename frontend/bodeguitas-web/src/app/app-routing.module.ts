@@ -15,6 +15,7 @@ import { ProductViewComponent } from './product-view/product-view/product-view.c
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'user-interface', component: UserInterfaceComponent},
   { path: 'user-interface/view/:product_id', component: ProductViewComponent},
   
+  { path: 'shopping-cart', component: ShoppingCartComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
 

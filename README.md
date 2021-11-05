@@ -24,7 +24,7 @@ Consideramos que esta idea es interesante porque permitirá a diferentes usuario
 | `/` | ` - ` | Realizar login | 
 | `/user-interface` | ` - ` | Mostrar la pantalla de inicio al iniciar sesion | 
 | `/user-interface/view/:product_id` | `GET /products/:product_id` | Mostrar un producto y sus caracteristícas anhadidas | 
-| `/shopping-cart` | `GET /productsCart` `DELETE /productsCart/:user_id/:product_id` | Mostrar los productos 'Add to cart' | 
+| `/shopping-cart` | `GET /productsCart` <br> `DELETE /productsCart/:user_id/:product_id` | Mostrar los productos 'Add to cart' | 
 | `/products-new` | `POST /products` | Anhadir nuveos productos | 
 | `/login` | `POST /login` | Realizar el login de los usuarios | 
 | `/register` | `POST /users` | Registrar nuevos usuarios al sistema | 

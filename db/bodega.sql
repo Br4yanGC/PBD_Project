@@ -1,4 +1,3 @@
-drop database StockBodegas;
 create database StockBodegas;
 use StockBodegas;
 
@@ -296,38 +295,38 @@ INSERT INTO products(product_name, product_trademark, product_price, product_typ
 VALUES('Papa Amarilla x 1Kg', NULL, 3.99, 'frutas y verduras', 30, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Cebolla Roja x 1Kg', NULL, 2.89, 'frutas y verduras', 30, 3, NOW(), NOW();
+VALUES('Cebolla Roja x 1Kg', NULL, 2.89, 'frutas y verduras', 30, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Tomate Italiano x 1Kg', NULL, 6.99, 'frutas y verduras', 30, 3, NOW(), NOW();
+VALUES('Tomate Italiano x 1Kg', NULL, 6.99, 'frutas y verduras', 30, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('BETERRAGA x 1Unid.', NULL, 3.90, 'frutas y verduras', 30, 3, NOW(), NOW();
+VALUES('BETERRAGA x 1Unid.', NULL, 3.90, 'frutas y verduras', 30, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Papaya x 1Kg.', NULL, 5.40, 'frutas y verduras', 15, 3, NOW(), NOW();
+VALUES('Papaya x 1Kg.', NULL, 5.40, 'frutas y verduras', 15, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Granadilla x 1Unid.', NULL, 0.70, 'frutas y verduras', 30, 3, NOW(), NOW();
+VALUES('Granadilla x 1Unid.', NULL, 0.70, 'frutas y verduras', 30, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Platano x 1Kg.', NULL, 2.39, 'frutas y verduras', 20, 3, NOW(), NOW();
+VALUES('Platano x 1Kg.', NULL, 2.39, 'frutas y verduras', 20, 3, NOW(), NOW());
 
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
 VALUES('Pollo entero con menudensia x Kg', NULL, 8.79, 'carnes y embutidos', 20, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Chuleta de pavita x Kg', 'SAN FERNANDO', 26.00, 'carnes y embutidos', 15, 3, NOW(), NOW()));
+VALUES('Chuleta de pavita x Kg', 'SAN FERNANDO', 26.00, 'carnes y embutidos', 15, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Salchicha de Huacho x UND', 'CASA EUROPEA', 7.90, 'carnes y embutidos', 20, 3, NOW(), NOW()));
+VALUES('Salchicha de Huacho x UND', 'CASA EUROPEA', 7.90, 'carnes y embutidos', 20, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Jamonada Sandwich x UND', 'SUIZA', 4.20, 'carnes y embutidos', 20, 3, NOW(), NOW()));
+VALUES('Jamonada Sandwich x UND', 'SUIZA', 4.20, 'carnes y embutidos', 20, 3, NOW(), NOW());
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)
-VALUES('Hot Dog Paquete 220 gr', 'SUIZA', 5.20, 'carnes y embutidos', 20, 3, NOW(), NOW()));
+VALUES('Hot Dog Paquete 220 gr', 'SUIZA', 5.20, 'carnes y embutidos', 20, 3, NOW(), NOW());
 
 
 INSERT INTO products(product_name, product_trademark, product_price, product_type,product_stock, user_id, created_date, modified_date)

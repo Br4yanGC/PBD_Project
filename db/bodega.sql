@@ -44,7 +44,6 @@ VALUES ('alonso@hotmail.com', MD5('enero101992'), NOW(), NOW());
 INSERT INTO users(username, password, created_date, modified_date) 
 VALUES ('alicia@hotmail.com', MD5('alicia22222'), NOW(), NOW());
 
-
 INSERT INTO products(product_name,product_trademark, product_price, product_type, product_stock, user_id, created_date, modified_date)
 VALUES('Sal de mesa 1kg', 'EMSAL', 1.60, 'viveres',30,1,now(),now());
 

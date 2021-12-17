@@ -4,12 +4,10 @@
 
 - Brayan Eduardo Gomero Castillo  (@Br4yanGC)
 - Sanders Chancan Chanca (@Zanderz17)
-- Diego Antonio Escajadillo Guerrero (@DiEsGue07)
-- Anderson David Cárcamo Vargas   (@AndersonCarcamo)
 
 # Tema del proyecto
 
-`Aplicación web enfocada en la gestión de bodegas`
+`Aplicación mobile enfocada en la gestión de bodegas`
 
 ## Motivación
 
@@ -18,37 +16,24 @@ Dada la coyuntura en la que nos encontramos muchas personas han visto convenient
 
 ## Funcionalidades
 
-| Angular Route | Backend URLs | Funcionalidad |
+| Route | Backend URLs | Funcionalidad |
 | --- | --- | --- |
-| `/` | ` - ` | Realizar login | 
-| `/user-interface` | ` - ` | Mostrar la pantalla de inicio al iniciar sesion | 
-| `/user-interface/view/:product_id` | `GET /products/:product_id` | Mostrar un producto y sus caracteristícas anhadidas | 
-| `/shopping-cart` | `GET /productsCart` <br> `DELETE /productsCart/:user_id/:product_id` | Mostrar los productos 'Add to cart' | 
-| `/products-new` | `POST /products` | Anhadir nuveos productos | 
-| `/login` | `POST /login` | Realizar el login de los usuarios | 
-| `/register` | `POST /users` | Registrar nuevos usuarios al sistema | 
-| `/user-interface/aseo-y-limpieza` | `GET /products` | Mostrar los productos del tipo aseo y limpieza |
-| `/user-interface/aseo-y-limpieza/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar determinado producto del tipo aseo y limpieza |
-| `/user-interface/aseo-y-limpieza/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo aseo y limpieza | 
-| `/user-interface/bebidas` | `GET /products` | Mostrar los productos del tipo bebidas  | 
-| `/user-interface/bebidas/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar determinado producto del tipo bebidas |
-| `/user-interface/bebidas/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo bebidas | 
-| `/user-interface/carnes-y-embutidos` | `GET /products` | Mostrar los productos del tipo carnes y embutidos | 
-| `/user-interface/carnes-y-embutidos/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar productos del tipo carnes y embutidos |
-| `/user-interface/carnes-y-embutidos/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo carnes y embutidos | 
-| `/user-interface/dulces-y-snacks` | `GET /products` | Mostrar los productos del tipo dulces y snacks | 
-| `/user-interface/dulces-y-snacks/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar productos del tipo dulces y snacks |
-| `/user-interface/dulces-y-snacks/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo dulces y snacks | 
-| `/user-interface/frutas-y-verduras` | `GET /products` | Mostrar los productos del tipo frutas y verduras | 
-| `/user-interface/frutas-y-verduras/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar productos del tipo frutas y verduras |
-| `/user-interface/frutas-y-verduras/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo frutas y verduras | 
-| `/user-interface/utiles-escolares` | `GET /products` | Mostrar los productos del tipo utiles escolares | 
-| `/user-interface/utiles-escolares/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar determinado producto del tipo utiles escolares |
-| `/user-interface/utiles-escolares/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo utiles escolares | 
-| `/user-interface/viveres` | `GET /products` | Mostrar los productos del tipo viveres | 
-| `/user-interface/viveres/delete/:user_id/:product_id` | `DELETE /products/:user_id/:product_id` | Eliminar determinado producto del tipo viveres |
-| `/user-interface/viveres/edit/:product_id` | `PUT /products/:product_id` | Modificar un producto del tipo viveres | 
+| `/products` | `GET /products` | Ver miembros del club de ajedrez | 
+| `/products/aseo-y-limpieza` | `GET /products/:product_id` | Productos del tipo aseo y limpieza | 
+| `/products/bebidas` | `GET /products/:product_id` | Productos del tipo bebidas | 
+| `/products/carne-y-embutidos` | `GET /products/:product_id` | Productos del tipo carne y embutidos | 
+| `/products/dulces-y-snacks` | `GET /products/:product_id` | Productos del tipo dulces y snacks | 
+| `/products/frutas-y-verduras` | `GET /products/:product_id` | Productos del tipo frutas y verduras | 
+| `/products/utiles-escolares` | `GET /products/:product_id` | Productos del tipo utiles escolares | 
+| `/products/viveres` | `GET /products/:product_id` | Productos del tipo viveres | 
+| `/products/products-view` | `GET /tournaments` | Permite visualizar un producto en función de su product_id |
+| `/products/products-create` | `POST /tournaments` | Permite crear un producto |
+| `/products/products-delete` | `DELETE /tournaments` | Permite eliminar un product |
+| `/products/products-edit` | `PUT /tournaments` | Permite editar un produto |
 
+| Ionic Plugin | Backend URLs (si es que usa) | Funcionalidad
+| --- | --- | --- |
+| `Camera` | `POST /figures` | Toma la foto a un miembro y la guarda en el server | 
 
 ## Instalación
 
@@ -82,4 +67,4 @@ Dada la coyuntura en la que nos encontramos muchas personas han visto convenient
 
 2. Iniciar el proyecto
 
-`ng serve --open`
+`ionic serve --open`
